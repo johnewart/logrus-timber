@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/johnewart/logrus-timber/timberlog"
 	"github.com/sirupsen/logrus"
 	"os"
 	"time"
@@ -33,7 +34,7 @@ func main() {
 		"cpus":     4,
 	}
 
-	hook := NewTimberLogHook(apiKey, sourceId)
+	hook := timberlog.NewTimberLogHook(apiKey, sourceId)
 
 	l.AddHook(hook)
 	e := l.WithFields(logFields)

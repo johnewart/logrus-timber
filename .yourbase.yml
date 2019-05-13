@@ -1,0 +1,15 @@
+dependencies:
+  build:
+    - go:1.12
+
+build_targets:
+  - name: default
+    commands:
+      - go get
+      - go build
+
+ci:
+  builds:
+    - name: run_tests
+      build_target: default
+

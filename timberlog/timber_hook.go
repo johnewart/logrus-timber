@@ -1,4 +1,4 @@
-package main
+package timberlog
 
 import (
 	"bytes"
